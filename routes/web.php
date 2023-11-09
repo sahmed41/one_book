@@ -15,11 +15,9 @@ use App\Http\Controllers\BookIssuanceController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [BookController::class, 'index'])->name('book.index');
 
-Route::get('/book', [BookController::class, 'index'])->name('book.index');
+// Route::get('/book', [BookController::class, 'index'])->name('book.index');
 Route::get('/book/add', [BookController::class, 'add'])->name('book.add');
 Route::post('/book', [BookController::class, 'store'])->name('book.store');
 Route::get('/book/{book}/edit', [BookController::class, 'edit'])->name('book.edit');

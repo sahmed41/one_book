@@ -1,0 +1,335 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+:root {
+    --blue-clr: #0660ba;
+    --white-clr: #fff;
+    --bage-clr: #a89767;
+    --dark-clr: #000;
+    --dark-grey-clr: #a6a298;
+    --red-clr: #96504b;
+    --green-clr: #53853e;
+    --light-green-clr: #b1e39d;
+    --light-red-clr: #f2a5a5;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Header styles */
+
+header {
+    background-color: var(--blue-clr);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 10px;
+    color: var(--white-clr);
+}
+
+header h1 a {
+    background-color: var(--blue-clr);
+    height: initial;
+    padding: 0;
+}
+
+/* Add button styles  */
+header a {
+    background-color: var(--bage-clr);
+    display: block;
+    height: 30px;
+    padding: 5px;
+    color: var(--white-clr);
+    text-decoration: none;
+    font-weight: 700;
+}
+
+/* Main Element styles */
+main {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 90%;
+    min-height: 90vh;
+    margin: 0 auto;
+}
+
+main.non-flex {
+    display: block;
+}
+
+/* Book card styles */
+.book_card {
+    display: block;
+    background-color: var(--dark-grey-clr);
+    min-width: 420px;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 30px;
+}
+
+.book_card h2,
+.book_card p {
+    text-align: center;
+    margin: 10px auto;
+}
+
+.book_card p {
+    font-size: 1.2em;
+}
+
+.book_card .book_stock {
+    background-color: var(--light-green-clr);
+    width: max-content;
+    margin: 10px auto;
+    padding: 10px;
+    border-radius: 5px;
+    color: var(--green-clr);
+    font-weight: bold;
+}
+
+.book_card .book_out_of_stock {
+    background-color: var(--light-red-clr);
+    width: max-content;
+    margin: 10px auto;
+    padding: 10px;
+    border-radius: 5px;
+    color: var(--red-clr);
+    font-weight: bold;
+}
+
+/* Buttons styles */
+
+.buttons {
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.open_button,
+.edit_button,
+.delete_form {
+    display: inline-block;
+}
+
+.open_button,
+.edit_button,
+.delete_button {
+    background-color: var(--white-clr);
+    height: 35px;
+    padding: 5px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    color: var(--white-clr);
+    text-align: center;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+.open_button {
+    background-color: var(--green-clr);
+}
+
+.edit_button {
+    background-color: var(--blue-clr);
+}
+
+.delete_button {
+    background-color: var(--red-clr);
+}
+
+/* Footer settings */
+footer {
+    background-color: var(--blue-clr);
+    width: 100%;
+    padding: 10px;
+    color: var(--white-clr);
+    font-size: 1.2em;
+    text-align: center;
+}
+
+/* Add Books Page */
+
+
+.page_heading {
+    text-align: center;
+    margin: 30px auto;
+}
+
+#book_add_form, #book_update_form {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+#book_add_form div,
+#book_update_form div {
+    width: 100%;
+    margin: 20px auto;
+    font-size: 1.2em;
+}
+
+#book_add_form div label,
+#book_update_form div label {
+    display: inline-block;
+    width: 25%;
+    font-size: 1.1em;
+}
+
+
+#book_add_form div input,
+#book_update_form div input {
+    width: 70%;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 1.1em;
+}
+
+#book_add_form div input[type='submit'],
+#book_update_form div input[type='submit'] {
+    display: block;
+    background-color: var(--green-clr);
+    width: 50%;
+    margin: auto;
+    border: none;
+    outline: none;
+    color: var(--white-clr);
+}
+
+
+/* Single book page */
+#book_information, #issue_form {
+    background-color: var(--dark-grey-clr);
+    width: 100%;
+    margin: 10px auto;
+    padding: 20px;
+    border-radius: 15px;
+}
+
+#book_information p {
+    margin: 10px auto;
+    font-size: 1.1em;
+}
+
+#book_information #single_book_stock {
+    background-color: var(--light-green-clr);
+    margin: 10px auto;
+    padding: 10px;
+    border-radius: 5px;
+    color: var(--green-clr);
+    font-weight: bold;
+}
+
+#book_information #single_book_out_of_stock {
+    background-color: var(--light-red-clr);
+    margin: 10px auto;
+    padding: 10px;
+    border-radius: 5px;
+    color: var(--red-clr);
+    font-weight: bold;
+}
+
+#issue_form {
+    border-radius: 15px;
+    font-size: 1.1em;
+}
+
+#issue_form select {
+    width: 100%;
+    height: 50px;
+    margin: 5px auto;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 1.1em;
+}
+
+#issue_form input[type="submit"] {
+    background-color: var(--green-clr);
+    width: 100%;
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    color: var(--white-clr);
+    font-size: 1.1em;
+}
+
+#issuances {
+    margin: 50px auto;
+    padding-top: 30px;
+    border-top: 2px solid var(--dark-clr);
+}
+
+
+.issue_card {
+    background-color: var(--bage-clr);
+    padding: 10px;
+    margin: 10px auto;
+    border-radius: 15px;
+    font-size: 1.1em;
+}
+
+.issue_card p {
+    margin: 5px auto;
+    font-size: 1.2em;
+}
+
+.issue_returned {
+    background-color: var(--light-green-clr);
+    width: max-content;
+    margin: 30px auto;
+    padding: 10px;
+    border-radius: 5px;
+    color: var(--green-clr);
+    font-weight: 700;
+}
+
+p.issue_return_form {
+    width: 100%;
+}
+
+.issue_return_form input[type="submit"]{
+    background-color: var(--blue-clr);
+    margin: 10px auto;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    color: var(--white-clr);
+    font-size: 1.1em;
+    cursor: pointer;
+}
+
+.issue_return_form input[type="submit"]:hover {
+    background-color: var(--white-clr);
+    color: var(--blue-clr);
+}
+
+
+
+
+/* Resonsive Styles */
+
+@media screen and (min-width: 500px) {
+    main {
+        flex-direction: row;
+        justify-content: flex-start;
+    }
+}
+
+@media screen and (min-width: 800px) {
+    #book_information, #issue_form {
+        display: inline-block;
+        width: 49%;
+        min-height: 175.6px;
+    }
+}
+
+
