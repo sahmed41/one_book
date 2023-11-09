@@ -17,6 +17,7 @@
                 <th>Author</th>
                 <th>Price</th>
                 <th>Stock</th>
+                <th>Open</th>
                 <th>Edit Link</th>
                 <th>Delete</th>
             </tr>
@@ -26,7 +27,16 @@
                     <td>{{$book->title}}</td>
                     <td>{{$book->author}}</td>
                     <td>{{$book->price}}</td>
-                    <td>{{$book->stock}}</td>
+                    <td>
+                        @if ($book->stock > 0)
+                            {{$book->stock}}
+                        @else
+                            Out of stock
+                        @endif
+                    </td>
+                    <td>
+                        <a href="{{route('book.singleBook', ['book' => $book])}}">Open</a>
+                    </td>
                     <td>
                         <a href="{{route('book.edit', ['book' => $book])}}">Edit</a>
                     </td>

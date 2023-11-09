@@ -4,6 +4,11 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Book;
+use App\Models\Member;
+use App\Models\BookIssuance;
+
+
+use Illuminate\Support\Facades\DB;
 
 class BookController extends Controller
 {
@@ -55,5 +60,13 @@ class BookController extends Controller
     public function destroy(Book $book) {
         $book->delete();
         return redirect(route('book.index'))->with('success', 'Product deleted successfully');
+    }
+
+    // The functions gets the information of an individual page to be viewed
+    public function singleBook(Book $book) {
+        $members = Member::all(); // Storing all member information in a variable
+        // $book_issuances = BookIssuance::all(); // Storing all member information in a variable
+        $book_issuances = DB::table('book_issuances')->where('book', $book->id)->get(); // Storing all member information in a variable
+        return view('books.single_book', ['book' => $book, 'members' => $members, 'issues'=> $book_issuances]); // Passing the book and members information for issuance
     }
 }
