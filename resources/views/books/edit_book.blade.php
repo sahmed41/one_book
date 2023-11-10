@@ -19,13 +19,15 @@
         <form method="post" action="{{route('book.update', ["book" => $book])}}" id="book_update_form">
             @csrf
             @method('put')
+            {{-- Handling Errors --}}
             @if ($errors->any())
-            <ul>
+            <ul id="errors">
                 @foreach ($errors->all() as $error )
-                <li>{{$error}}</li>
+                <li id="error">{{$error}}</li>
                 @endforeach
             </ul>
             @endif
+            {{-- -------------- --}}
             <div>
                 <label for="title">Title</label>
                 <input type="text" id="title" name="title" placeholder="Enter title here" value="{{$book->title}}">

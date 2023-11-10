@@ -73,6 +73,15 @@
                             <form method="post" action="{{route('book.return', ['issue'=>$issue->id, 'book'=>$book])}}" class="issue_return_form">
                                 @csrf
                                 @method('put')
+                                {{-- Handing errors --}}
+                                @if ($errors->any())
+                                <ul id="errors">
+                                    @foreach ($errors->all() as $error )
+                                    <li id="error">{{$error}}</li>
+                                    @endforeach
+                                </ul>
+                                @endif
+                                {{-- ---------------- --}}
                                 <input type="hidden" name="returned" value="1">
                                 <input type="hidden" name="returned_on" id="current_time" value="{{$currentDateTimeString}}"> {{-- Passing the time the book was returned--}}
                                 <input type="submit" value="Return">

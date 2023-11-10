@@ -18,13 +18,15 @@
         <form method="post" action="{{route('book.store')}}" id="book_add_form">
             @csrf
             @method('post')
+            {{-- Handling errors --}}
             @if ($errors->any())
-            <ul>
+            <ul id="errors">
                 @foreach ($errors->all() as $error )
-                <li>{{$error}}</li>
+                <li id="error">{{$error}}</li>
                 @endforeach
             </ul>
             @endif
+            {{-- --------------- --}}
             <div>
                 <label for="title">Title</label>
                 <input type="text" id="title" name="title" placeholder="Enter title here">
