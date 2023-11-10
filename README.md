@@ -1,5 +1,5 @@
 # ONE BOOK 
-'One Book' is the title of the project. This project aimes to develop a book stock managment app in a enviroment where books are lent to and returned by members. The system is applicable in a library like setting. 
+'One Book' is the title of the project. This project aimes to develop a book stock managment app in a enviroment where books are lent to and returned by members. The system is applicable in a front desk of a library like setting.
 
 ## Requirements
 Following were the requirements or functions expected out of the system.
@@ -19,6 +19,9 @@ Following were the requirements or functions expected out of the system.
 - Further the Eloquent ORM  is used by Laravel to interact with the database using models that corresponds with tables.
 - The Laravel routing was used to handle the page routing or navigation
 - It is a responsive soluiton that renders in screens of differnt sizes
+
+## Usage
+The system is applicable in a front desk of a library like setting.
 
 ## Contributing
 The project was built by me (Shafeeq Ahmed Mohammed Waseen) for the purpose of skill demonstration.
