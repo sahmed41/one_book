@@ -21,7 +21,10 @@ Following were the requirements or functions expected out of the system.
 - It is a responsive soluiton that renders in screens of differnt sizes
 
 ## Usage
-The system is applicable in a front desk of a library like setting.
+The system is applicable in a front desk of a library like setting. A user must login in order to use the One Book system.
+- Following is the example login credential.
+    - Email: jacob@email.com
+    - Password: jacob1234
 
 ## Contributing
 The project was built by me (Shafeeq Ahmed Mohammed Waseen) for the purpose of skill demonstration.

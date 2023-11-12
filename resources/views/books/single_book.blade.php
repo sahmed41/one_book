@@ -16,8 +16,9 @@
 <body>
     <header>
         <h1><a href="{{route('book.index')}}">One Books</a></h1>
-        <div id="add_book_button_container">
+        <div id="header_button_container">
             <a href="{{route('book.add')}}" id="add_book_button">Add Books</a>
+            <a href="{{route('authenticate.logout')}}" id="logout_button">Logout</a>
         </div>
     </header>
 
@@ -25,9 +26,9 @@
         <h2 class="page_heading">{{$book->title}}</h2>
         <div id="book_related">
             <div id="book_information">
-                <p id="single_book_id">Book ID: {{$book->id}}</p>
-                <p id="single_book_author">Author: {{$book->author}}</p>
-                <p id="single_book_price">Price: {{$book->price}}</p>
+                <p id="single_book_id"><span class="label">Book ID:</span> {{$book->id}}</p>
+                <p id="single_book_author"><span class="label">Author:</span> {{$book->author}}</p>
+                <p id="single_book_price"><span class="label">Price:</span> Rs. {{$book->price}}</p>
                 <p
                 @if ($book->stock > 0)
                     id="single_book_stock"
@@ -66,9 +67,9 @@
                 @foreach ($members as $member)
                     @if ($member->id == $issue->member)
                         <div class="issue_card">
-                            <p>Issue  ID: {{$issue->id}}</p>
-                            <p>Issued to: {{$member->name}}</p>
-                            <p>Issued Date: {{$issue->issue_on}}</p>
+                            <p><span class=label>Issue  ID:</span>{{$issue->id}}</p>
+                            <p><span class=label>Issued to:</span>{{$member->name}}</p>
+                            <p><span class=label>Issued Date:</span> {{$issue->issue_on}}</p>
                             @if ($issue->returned == null)
                             <form method="post" action="{{route('book.return', ['issue'=>$issue->id, 'book'=>$book])}}" class="issue_return_form">
                                 @csrf

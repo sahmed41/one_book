@@ -9,8 +9,9 @@
 <body>
     <header>
         <h1><a href="{{route('book.index')}}">One Books</a></h1>
-        <div id="add_book_button_container">
+        <div id="header_button_container">
             <a href="{{route('book.add')}}" id="add_book_button">Add Books</a>
+            <a href="{{route('authenticate.logout')}}" id="logout_button">Logout</a>
         </div>
     </header>
     <main id="add_form_main" class="non-flex">

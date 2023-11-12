@@ -22,6 +22,15 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
+/* *************** */
+/* General Styling */
+/* *************** */
+
+.label {
+    font-weight: bold;
+}
+
+
 /* ************* */
 /* Error Styling */
 /* ************* */
@@ -41,7 +50,7 @@ body {
 
 
 /* ************* */
-/* Header styles */
+/* Header Styles */
 /* ************* */
 
 header {
@@ -56,16 +65,14 @@ header {
 }
 
 /* Site title styles */
-
 header h1 a {
     background-color: var(--blue-clr);
     height: initial;
     padding: 0;
 }
 
-/* Add button styles  */
+/* Add Button Styles  */
 header a {
-    background-color: var(--bage-clr);
     display: block;
     height: 30px;
     padding: 5px;
@@ -75,19 +82,37 @@ header a {
     font-weight: 700;
 }
 
+header #header_button_container {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+}
+
+header #add_book_button {
+    background-color: var(--bage-clr);
+    color: var(--white-clr);
+}
+
 header #add_book_button:hover {
     background-color: var(--white-clr);
     color: var(--bage-clr);
 }
 
+header #logout_button {
+    background-color: var(--red-clr);
+    color: var(--white-clr);
+}
+
+header #logout_button:hover {
+    background-color: var(--white-clr);
+    color: var(--red-clr);
+}
+
 
 /* ******************* */
-/* Main Element styles */
+/* Main Element Styles */
 /* ******************* */
 main {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
     width: 90%;
     min-height: 90vh;
     margin: 0 auto;
@@ -95,6 +120,14 @@ main {
 
 main.non-flex {
     display: block;
+}
+
+.book_cards_container {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: 0 auto;
 }
 
 /* **************** */
@@ -223,20 +256,22 @@ footer {
     margin: 30px auto;
 }
 
-#book_add_form, #book_update_form {
+#book_add_form, #book_update_form, #login_form {
     max-width: 500px;
     margin: 0 auto;
 }
 
 #book_add_form div,
-#book_update_form div {
+#book_update_form div,
+#login_form div {
     width: 100%;
     margin: 20px auto;
     font-size: 1.2em;
 }
 
 #book_add_form div label,
-#book_update_form div label {
+#book_update_form div label,
+#login_form div label {
     display: inline-block;
     width: 25%;
     font-size: 1.1em;
@@ -244,7 +279,8 @@ footer {
 
 
 #book_add_form div input,
-#book_update_form div input {
+#book_update_form div input,
+#login_form div input {
     width: 70%;
     padding: 10px;
     border-radius: 10px;
@@ -252,7 +288,8 @@ footer {
 }
 
 #book_add_form div input[type='submit'],
-#book_update_form div input[type='submit'] {
+#book_update_form div input[type='submit'],
+#login_form div input[type='submit'] {
     display: block;
     background-color: var(--green-clr);
     width: 50%;
@@ -261,6 +298,10 @@ footer {
     outline: none;
     color: var(--white-clr);
 }
+
+
+
+
 
 
 /* **************** */
@@ -385,7 +426,7 @@ p.issue_return_form {
 /* ***************** */
 
 @media screen and (min-width: 500px) {
-    main {
+    .book_cards_container {
         flex-direction: row;
         justify-content: flex-start;
     }
