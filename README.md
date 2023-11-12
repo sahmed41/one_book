@@ -1,11 +1,16 @@
-# ONE BOOK 
+
 <img src="https://github.com/sahmed41/one_book/blob/master/about_system/screen_shots/desktop.PNG?raw=true" alt="One Book Desktop View" title="One Book Desktop Layout">
 
+# ONE BOOK 
 'One Book' is the title of the project. This project aimes to develop a book stock managment app in a enviroment where books are lent to and returned by members. The system is applicable in a front desk of a library like setting.
 
 ## Screenshots
 
+Desktop View
+
 <img src="https://github.com/sahmed41/one_book/blob/master/about_system/screen_shots/desktop.PNG?raw=true" alt="One Book Desktop View" title="One Book Desktop Layout">
+
+Mobile View
 
 <img src="https://github.com/sahmed41/one_book/blob/master/about_system/screen_shots/mobile.PNG?raw=true" alt="One Book Desktop View" title="One Book Desktop Layout">
 
